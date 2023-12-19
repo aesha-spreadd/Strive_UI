@@ -15,44 +15,28 @@ export const StyledButtonComponent = styled.button`
   font-weight: 600;
   text-transform: uppercase;
 
-  background-color: ${({ outline, type }) =>
-    outline ? 'transparent' : theme?.[type]};
-  color: ${({ outline, type }) => (outline ? theme?.[type] : 'white')};
-  border-color: ${({ border, type }) =>
-    border ? 'transparent' : theme?.[type]};
+  ${({ type, outline, border }) => css`
+    background-color: ${outline ? 'transparent' : theme?.[type]};
+    color: ${outline ? theme?.[type] : 'white'};
+    border-color: ${border ? 'transparent' : theme?.[type]};
+  `}
 
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-
-  ${({ outline, hovers, type }) =>
-    outline &&
-    css`
-      background-color: transparent;
-      color: ${theme?.[type]};
-      ${hovers &&
-      css`
-        &:hover,
-        &:active {
-          background-color: ${theme?.[type]};
-          color: white;
-        }
-      `}
-    `}
-
-  ${({ outline, hovers, type }) =>
-    !outline &&
-    css`
-      background-color: ${theme?.[type]};
-      color: white;
-      ${!hovers &&
-      css`
-        &:hover,
-        &:active {
-          background-color: ${theme?.[type]};
-          color: white;
-        }
-      `}
-    `}
+  ${css`
+    ${({ outline, hovers, type }) => {
+      if (outline) {
+        return css`
+          background-color: transparent;
+          color: ${theme?.[type]};
+          ${hovers &&
+          css`
+            &:hover,
+            &:active {
+              background-color: ${theme?.[type]};
+              color: white;
+            }
+          `}
+        `;
+      }
+    }}
+  `}
 `;
