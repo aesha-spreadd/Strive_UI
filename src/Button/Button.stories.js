@@ -35,7 +35,7 @@ export const TextButtons = () => (
     <Button
       type="primary"
       variant="contained"
-      text="PIRMARY LINK BUTTON"
+      text="Primary Link Button"
       border
       outline
       hover
