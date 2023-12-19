@@ -27,33 +27,38 @@ export const HeadingsTypography = () => (
 export const TextTypography = () => (
   <div>
     <Typography
-      type="primary"
+      type="p"
       variant="typography"
       text="Adorn Box text with primary color"
+      typeColor="primary"
     />
     <Divider />
     <Typography
-      type="secondary"
+      type="p"
       variant="typography"
       text="Adorn Box text with secondary color"
+      typeColor="secondary"
     />
     <Divider />
     <Typography
-      type="success"
+      type="p"
       variant="typography"
       text="Adorn Box text with success color"
+      typeColor="success"
     />
     <Divider />
     <Typography
-      type="danger"
+      type="p"
       variant="typography"
       text="Adorn Box text with danger color"
+      typeColor="danger"
     />
     <Divider />
     <Typography
-      type="warning"
+      type="p"
       variant="typography"
       text="Adorn Box text with warning color"
+      typeColor="warning"
     />
     <Divider />
   </div>

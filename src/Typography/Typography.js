@@ -2,9 +2,13 @@
 import React from 'react';
 import { StyledTypographyComponent } from './Typography.Styled';
 
-const Typography = ({ type, variant, text }) => {
+const Typography = ({ type, variant, text, typeColor }) => {
   return (
-    <StyledTypographyComponent type={type} variant={variant}>
+    <StyledTypographyComponent
+      as={type}
+      variant={variant}
+      typeColor={typeColor}
+    >
       {text}
     </StyledTypographyComponent>
   );

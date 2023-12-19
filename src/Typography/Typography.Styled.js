@@ -7,11 +7,11 @@ export const StyledTypographyComponent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${theme.textLinkColors};
-  ${({ type, variant }) =>
+  color: ${({ typeColor }) => theme[typeColor] || theme.textLinkColors};
+  ${({ type, variant, typeColor }) =>
     type
       ? css`
-          ${variant ? `color: ${theme?.[type]};` : ''}
+          ${variant ? `color: ${theme?.[typeColor]};` : ''}
           ${type === 'h1'
             ? css`
                 font-size: 48px;
@@ -50,6 +50,19 @@ export const StyledTypographyComponent = styled.div`
                 height: 12.1953px;
               `
             : ''}
+          position: relative;
+          &:hover::before {
+            content: attr(data-type); // Show the 'type' attribute on hover
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+          }
         `
       : ''}
 `;
