@@ -9,24 +9,24 @@ export default {
 
 export const listButton = () => (
   <div>
-    <Button type="primary" variant="contained" text="PRIMARY BUTTON" />
-    <Button type="secondary" variant="contained" text="SECONDARY BUTTON" />
-    <Button type="success" variant="contained" text="SUCCESS BUTTON" />
-    <Button type="warning" variant="contained" text="WARNING BUTTON" />
+    <Button type="primary" variant="contained" text="Primary Button" />
+    <Button type="secondary" variant="contained" text="Secondary Button" />
+    <Button type="success" variant="contained" text="Success Button" />
+    <Button type="warning" variant="contained" text="Warning Button" />
   </div>
 );
 
 export const OutlineButtons = () => (
   <div>
-    <Button type="primary" variant="outlined" text="PRIMARY BUTTON" outline />
+    <Button type="primary" variant="outlined" text="Primary Button" outline />
     <Button
       type="secondary"
       variant="outlined"
-      text="SECONDARY BUTTON"
+      text="Secondary Button"
       outline
     />
-    <Button type="success" variant="outlined" text="SUCCESS BUTTON" outline />
-    <Button type="warning" variant="outlined" text="WARNING BUTTON" outline />
+    <Button type="success" variant="outlined" text="Success Button" outline />
+    <Button type="warning" variant="outlined" text="Warning Button" outline />
   </div>
 );
 
@@ -43,7 +43,7 @@ export const TextButtons = () => (
     <Button
       type="secondary"
       variant="contained"
-      text="SECONDARY LINK BUTTON"
+      text="Secondary Link Button"
       border
       outline
       hover
@@ -51,7 +51,7 @@ export const TextButtons = () => (
     <Button
       type="success"
       variant="contained"
-      text="SUCCESS LINK BUTTON"
+      text="Success Link Button"
       border
       outline
       hover
@@ -59,7 +59,7 @@ export const TextButtons = () => (
     <Button
       type="warning"
       variant="contained"
-      text="WARNING LINK BUTTON"
+      text="Warning Link Button"
       border
       outline
       hover
