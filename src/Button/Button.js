@@ -2,21 +2,13 @@
 import React from 'react';
 import { StyledButtonComponent } from './Button.Styled';
 
-const Button = ({
-  type,
-  variant,
-  border,
-  text,
-  icon,
-  outline,
-  disableHover,
-}) => {
+const Button = ({ type, variant, border, text, icon, outline, hovers }) => {
   return (
     <StyledButtonComponent
       type={type}
       variant={variant}
       outline={outline}
-      disableHover={disableHover}
+      hovers={hovers}
       border={border}
     >
       {icon} {text}

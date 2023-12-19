@@ -18,15 +18,34 @@ export const listButton = () => (
 
 export const OutlineButtons = () => (
   <div>
-    <Button type="primary" variant="outlined" text="Primary Button" outline />
+    <Button
+      type="primary"
+      variant="outlined"
+      text="Primary Button"
+      outline
+      hovers
+    />
     <Button
       type="secondary"
       variant="outlined"
       text="Secondary Button"
       outline
+      hovers
     />
-    <Button type="success" variant="outlined" text="Success Button" outline />
-    <Button type="warning" variant="outlined" text="Warning Button" outline />
+    <Button
+      type="success"
+      variant="outlined"
+      text="Success Button"
+      outline
+      hovers
+    />
+    <Button
+      type="warning"
+      variant="outlined"
+      text="Warning Button"
+      outline
+      hovers
+    />
   </div>
 );
 
@@ -38,7 +57,6 @@ export const TextButtons = () => (
       text="Primary Link Button"
       border
       outline
-      hover
     />
     <Button
       type="secondary"
@@ -46,7 +64,6 @@ export const TextButtons = () => (
       text="Secondary Link Button"
       border
       outline
-      hover
     />
     <Button
       type="success"
@@ -54,7 +71,6 @@ export const TextButtons = () => (
       text="Success Link Button"
       border
       outline
-      hover
     />
     <Button
       type="warning"
@@ -62,7 +78,6 @@ export const TextButtons = () => (
       text="Warning Link Button"
       border
       outline
-      hover
     />
   </div>
 );
@@ -74,6 +89,7 @@ export const IconButtons = () => (
       variant="outlined"
       text="Save Button"
       outline
+      hovers
       icon={<FaSave />}
     />
     <Button

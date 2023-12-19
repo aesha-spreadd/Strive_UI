@@ -13,44 +13,46 @@ export const StyledButtonComponent = styled.button`
   margin-top: 10px;
   font-family: Arial;
   font-weight: 600;
+  text-transform: uppercase;
 
-  ${({ type, outline, border }) => css`
-    text-transform: uppercase;
-    background-color: ${outline ? 'transparent' : theme?.[type]};
-    color: ${outline ? theme?.[type] : 'white'};
-    border-color: ${border ? 'transparent' : theme?.[type]};
-  `}
+  background-color: ${({ outline, type }) =>
+    outline ? 'transparent' : theme?.[type]};
+  color: ${({ outline, type }) => (outline ? theme?.[type] : 'white')};
+  border-color: ${({ border, type }) =>
+    border ? 'transparent' : theme?.[type]};
 
-  ${css`
-    padding: 10px 20px;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-  `}
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
 
-  ${css`
-    ${({ outline, disableHover, type }) => {
-      if (outline) {
-        return css`
-          background-color: transparent;
-          color: ${theme?.[type]};
-        `;
-      } else {
-        return css`
+  ${({ outline, hovers, type }) =>
+    outline &&
+    css`
+      background-color: transparent;
+      color: ${theme?.[type]};
+      ${hovers &&
+      css`
+        &:hover,
+        &:active {
           background-color: ${theme?.[type]};
           color: white;
+        }
+      `}
+    `}
 
-          ${!disableHover &&
-          css`
-            &:hover,
-            &:active {
-              background-color: ${theme?.[type]};
-              color: white;
-            }
-          `}
-        `;
-      }
-    }}
-  `}
+  ${({ outline, hovers, type }) =>
+    !outline &&
+    css`
+      background-color: ${theme?.[type]};
+      color: white;
+      ${!hovers &&
+      css`
+        &:hover,
+        &:active {
+          background-color: ${theme?.[type]};
+          color: white;
+        }
+      `}
+    `}
 `;
