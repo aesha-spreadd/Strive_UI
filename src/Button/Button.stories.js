@@ -38,14 +38,15 @@ export const IconButtons = () => (
   <div>
     <Button
       type="primary"
-      variant="outlined"
+      variant="iconButton"
       text="Save Button"
       icon={<FaSave />}
     />
     <Button
       type="primary"
-      variant="contained"
+      variant="iconButton"
       text="Save Button"
+      contained
       icon={<FaSave />}
     />
   </div>
