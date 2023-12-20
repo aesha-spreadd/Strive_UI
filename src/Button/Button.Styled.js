@@ -1,3 +1,4 @@
+// Button.Styled.js
 import styled, { css } from 'styled-components';
 import theme from '../theme';
 
@@ -6,7 +7,6 @@ export const StyledButtonComponent = styled.button`
   width: max-content;
   padding: 11px 28px;
   cursor: pointer;
-  border: 2px solid;
   border-radius: 4px;
   font-size: 14px;
   margin-right: 10px;
@@ -15,28 +15,31 @@ export const StyledButtonComponent = styled.button`
   font-weight: 600;
   text-transform: uppercase;
 
-  ${({ type, outline, border }) => css`
-    background-color: ${outline ? 'transparent' : theme?.[type]};
-    color: ${outline ? theme?.[type] : 'white'};
-    border-color: ${border ? 'transparent' : theme?.[type]};
-  `}
+  ${({ type, variant, colorEffect, hovers }) => {
+    const isOutlined = variant === 'outlined';
+    const isTextButton = variant === 'textButton';
+    const bgColor = colorEffect ? 'transparent' : theme?.[type];
+    const textColor = colorEffect ? theme?.[type] : 'white';
+    const borderColor = isOutlined
+      ? theme?.[type]
+      : isTextButton
+      ? 'transparent'
+      : theme?.[type];
+    return css`
+      background-color: ${bgColor};
+      color: ${textColor};
+      border: 2px solid ${borderColor};
 
-  ${css`
-    ${({ outline, hovers, type }) => {
-      if (outline) {
-        return css`
-          background-color: transparent;
-          color: ${theme?.[type]};
-          ${hovers &&
-          css`
-            &:hover,
-            &:active {
-              background-color: ${theme?.[type]};
-              color: white;
-            }
-          `}
-        `;
-      }
-    }}
-  `}
+      ${colorEffect &&
+      hovers &&
+      css`
+        &:hover,
+        &:active {
+          background-color: ${theme?.[type]};
+          color: white;
+          border: 2px solid ${theme?.[type]};
+        }
+      `}
+    `;
+  }}
 `;

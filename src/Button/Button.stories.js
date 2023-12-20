@@ -22,28 +22,28 @@ export const OutlineButtons = () => (
       type="primary"
       variant="outlined"
       text="Primary Button"
-      outline
+      colorEffect
       hovers
     />
     <Button
       type="secondary"
       variant="outlined"
       text="Secondary Button"
-      outline
+      colorEffect
       hovers
     />
     <Button
       type="success"
       variant="outlined"
       text="Success Button"
-      outline
+      colorEffect
       hovers
     />
     <Button
       type="warning"
       variant="outlined"
       text="Warning Button"
-      outline
+      colorEffect
       hovers
     />
   </div>
@@ -53,31 +53,27 @@ export const TextButtons = () => (
   <div>
     <Button
       type="primary"
-      variant="contained"
+      variant="textButton"
       text="Primary Link Button"
-      border
-      outline
+      colorEffect
     />
     <Button
       type="secondary"
-      variant="contained"
+      variant="textButton"
       text="Secondary Link Button"
-      border
-      outline
+      colorEffect
     />
     <Button
       type="success"
-      variant="contained"
+      variant="textButton"
       text="Success Link Button"
-      border
-      outline
+      colorEffect
     />
     <Button
       type="warning"
-      variant="contained"
+      variant="textButton"
       text="Warning Link Button"
-      border
-      outline
+      colorEffect
     />
   </div>
 );
@@ -86,16 +82,17 @@ export const IconButtons = () => (
   <div>
     <Button
       type="primary"
-      variant="outlined"
+      variant="iconButton"
       text="Save Button"
-      outline
+      colorEffect
       hovers
       icon={<FaSave />}
     />
     <Button
       type="primary"
-      variant="contained"
+      variant="iconButton"
       text="Save Button"
+      contained
       icon={<FaSave />}
     />
   </div>

@@ -20,9 +20,9 @@ const theme = {
   inputBorder: 'rgb(74, 74, 104)',
   textColor: 'rgb(246, 249, 252)',
   successColor: 'rgb(76, 175, 80)',
-  dangerColor: 'rgb(244, 67, 54)',
+  danger: 'rgb(244, 67, 54)',
   secondaryColor: 'rgb(255, 152, 0)',
-  horizontalTitle: 'rgb(255, 78, 84);',
+  horizontalTitle: 'rgb(255, 78, 84)', // Remove the semicolon
   cardMain: 'rgb(255, 237, 237)',
   toastTextD: 'rgb(211, 22, 9)',
   navbarHover: 'rgb(200, 220, 240)',
