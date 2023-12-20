@@ -15,8 +15,7 @@ export const StyledButtonComponent = styled.button`
   text-transform: uppercase;
 
   ${({ type, variant, colorEffect, hovers }) => {
-    const isOutlined = variant === 'outlined' || variant === 'iconButton'; // Added 'iconButton' here
-    const isTextButton = variant === 'textButton';
+    const isOutlined = variant === 'outlined' || variant === 'iconButton';
     const bgColor = colorEffect ? 'transparent' : theme?.[type];
     const textColor = colorEffect ? theme?.[type] : 'white';
     const borderColor = isOutlined ? theme?.[type] : 'transparent';
