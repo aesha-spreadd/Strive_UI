@@ -22,7 +22,7 @@ const theme = {
   successColor: 'rgb(76, 175, 80)',
   danger: 'rgb(244, 67, 54)',
   secondaryColor: 'rgb(255, 152, 0)',
-  horizontalTitle: 'rgb(255, 78, 84)', // Remove the semicolon
+  horizontalTitle: 'rgb(255, 78, 84)',
   cardMain: 'rgb(255, 237, 237)',
   toastTextD: 'rgb(211, 22, 9)',
   navbarHover: 'rgb(200, 220, 240)',

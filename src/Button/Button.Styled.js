@@ -1,4 +1,3 @@
-// Button.Styled.js
 import styled, { css } from 'styled-components';
 import theme from '../theme';
 
@@ -16,15 +15,12 @@ export const StyledButtonComponent = styled.button`
   text-transform: uppercase;
 
   ${({ type, variant, colorEffect, hovers }) => {
-    const isOutlined = variant === 'outlined';
+    const isOutlined = variant === 'outlined' || variant === 'iconButton'; // Added 'iconButton' here
     const isTextButton = variant === 'textButton';
     const bgColor = colorEffect ? 'transparent' : theme?.[type];
     const textColor = colorEffect ? theme?.[type] : 'white';
-    const borderColor = isOutlined
-      ? theme?.[type]
-      : isTextButton
-      ? 'transparent'
-      : theme?.[type];
+    const borderColor = isOutlined ? theme?.[type] : 'transparent';
+
     return css`
       background-color: ${bgColor};
       color: ${textColor};
