@@ -1,9 +1,9 @@
-import React from 'react';
-import { FaSave } from 'react-icons/fa';
-import Button from './Button';
+import React from "react";
+import { FaSave } from "react-icons/fa";
+import Button from "./Button";
 
 export default {
-  title: 'Button',
+  title: "Button",
   component: Button,
 };
 
