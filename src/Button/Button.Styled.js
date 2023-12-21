@@ -41,9 +41,6 @@ export const StyledButtonComponent = styled.button`
       css`
         padding: 8px 28px;
         justify-content: space-between;
-
-        svg {
-        }
       `}
     `;
   }}
