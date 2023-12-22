@@ -7,7 +7,7 @@ export default {
   component: Button,
 };
 
-export const listButton = () => (
+export const ContainedButton = () => (
   <div>
     <Button type="primary" variant="contained" text="Primary Button" />
     <Button type="secondary" variant="contained" text="Secondary Button" />
