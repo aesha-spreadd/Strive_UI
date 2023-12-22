@@ -1,15 +1,10 @@
 // Button.js
-import React from "react";
-import { StyledButtonComponent } from "./Button.Styled";
+import React from 'react';
+import { StyledButtonComponent } from './Button.Styled';
 
-const Button = ({ type, variant, text, icon, colorEffect, hovers }) => {
+const Button = ({ type, variant, text, icon }) => {
   return (
-    <StyledButtonComponent
-      type={type}
-      variant={variant}
-      colorEffect={colorEffect}
-      hovers={hovers}
-    >
+    <StyledButtonComponent type={type} variant={variant}>
       {icon} {text}
     </StyledButtonComponent>
   );

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import theme from '../theme';
+import { TextButtons } from './Button.stories';
 
 export const StyledButtonComponent = styled.button`
   height: 38px;
@@ -15,32 +16,30 @@ export const StyledButtonComponent = styled.button`
   text-transform: uppercase;
   justify-content: center;
 
-  ${({ type, variant, colorEffect, hovers }) => {
-    const isOutlined = variant === 'outlined' || variant === 'iconButton';
-    const bgColor = colorEffect ? 'transparent' : theme?.[type];
-    const textColor = colorEffect ? theme?.[type] : 'white';
+  ${({ type, variant }) => {
+    const isOutlined = variant === 'outlined';
+    const isTextButton = variant === 'textButton';
+    const isContained = variant === 'contained';
+
+    const bgColor = isTextButton ? 'transparent' : theme?.[type];
+    const textColor = isOutlined || isTextButton ? theme?.[type] : 'white';
     const borderColor = isOutlined ? theme?.[type] : 'transparent';
 
     return css`
-      background-color: ${bgColor};
+      background-color: ${isOutlined ? 'white' : bgColor};
       color: ${textColor};
-      border: 2px solid ${borderColor};
+      border: ${isTextButton || isContained
+        ? 'none'
+        : `2px solid ${borderColor}`};
 
-      ${colorEffect &&
-      hovers &&
+      ${!isTextButton &&
+      !isContained &&
       css`
-        &:hover,
-        &:active {
-          background-color: ${theme?.[type]};
-          color: white;
+        &:hover {
+          background-color: ${isOutlined ? theme?.[type] : 'white'};
+          color: ${isOutlined ? 'white' : theme?.[type]};
           border: 2px solid ${theme?.[type]};
         }
-      `}
-
-      ${variant === 'iconButton' &&
-      css`
-        padding: 8px 28px;
-        justify-content: space-between;
       `}
     `;
   }}

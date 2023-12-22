@@ -1,9 +1,9 @@
-import React from "react";
-import { FaSave } from "react-icons/fa";
-import Button from "./Button";
+import React from 'react';
+import { FaSave } from 'react-icons/fa';
+import Button from './Button';
 
 export default {
-  title: "Button",
+  title: 'Button',
   component: Button,
 };
 
@@ -18,63 +18,23 @@ export const listButton = () => (
 
 export const OutlineButtons = () => (
   <div>
-    <Button
-      type="primary"
-      variant="outlined"
-      text="Primary Button"
-      colorEffect
-      hovers
-    />
-    <Button
-      type="secondary"
-      variant="outlined"
-      text="Secondary Button"
-      colorEffect
-      hovers
-    />
-    <Button
-      type="success"
-      variant="outlined"
-      text="Success Button"
-      colorEffect
-      hovers
-    />
-    <Button
-      type="warning"
-      variant="outlined"
-      text="Warning Button"
-      colorEffect
-      hovers
-    />
+    <Button type="primary" variant="outlined" text="Primary Button" />
+    <Button type="secondary" variant="outlined" text="Secondary Button" />
+    <Button type="success" variant="outlined" text="Success Button" />
+    <Button type="warning" variant="outlined" text="Warning Button" />
   </div>
 );
 
 export const TextButtons = () => (
   <div>
-    <Button
-      type="primary"
-      variant="textButton"
-      text="Primary Link Button"
-      colorEffect
-    />
+    <Button type="primary" variant="textButton" text="Primary Link Button" />
     <Button
       type="secondary"
       variant="textButton"
       text="Secondary Link Button"
-      colorEffect
     />
-    <Button
-      type="success"
-      variant="textButton"
-      text="Success Link Button"
-      colorEffect
-    />
-    <Button
-      type="warning"
-      variant="textButton"
-      text="Warning Link Button"
-      colorEffect
-    />
+    <Button type="success" variant="textButton" text="Success Link Button" />
+    <Button type="warning" variant="textButton" text="Warning Link Button" />
   </div>
 );
 
@@ -82,17 +42,14 @@ export const IconButtons = () => (
   <div>
     <Button
       type="primary"
-      variant="iconButton"
+      variant="outlined"
       text="Save Button"
-      colorEffect
-      hovers
       icon={<FaSave />}
     />
     <Button
       type="primary"
-      variant="iconButton"
+      variant="contained"
       text="Save Button"
-      contained
       icon={<FaSave />}
     />
   </div>
