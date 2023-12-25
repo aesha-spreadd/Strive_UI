@@ -4,25 +4,21 @@ module.exports = {
     commonjs: true,
     es2021: true,
   },
-  extends: [
-    "standard",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-  ],
+  extends: ['plugin:react/recommended'],
   overrides: [
     {
       env: {
         node: true,
       },
-      files: [".eslintrc.{js,cjs}"],
+      files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
-        sourceType: "script",
+        sourceType: 'script',
       },
     },
   ],
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: 'latest',
   },
-  plugins: ["react"],
+  plugins: ['react'],
   rules: {},
 };
