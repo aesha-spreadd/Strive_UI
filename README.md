@@ -1,5 +1,4 @@
 # storybook_components
-Creating a component library like "storybook_components" with predefined responsive components involves several steps. Below is a basic guide on how you can structure your project using React, webpack, babel, eslint, and Storybook.
 
 ### Step 1: Project Setup
 
@@ -47,7 +46,7 @@ Create `.stories.js` files for each component inside the `src/components` direct
 
 ### Step 9: Start Storybook
 
- you can run `npm run storybook` to start the Storybook development server.
+you can run `npm run storybook` to start the Storybook development server.
 
 ### Step 10: Build the Library
 
@@ -60,5 +59,3 @@ Add a build script to your `package.json`:
 ```
 
 Now, you can run `npm run build` to build your component library.
-
-This is a basic setup to get you started. Depending on your specific requirements, you may need to customize the configurations and add additional tools or libraries.
