@@ -1,14 +1,9 @@
-// Typography.js
 import React from 'react';
-import { StyledTypographyComponent } from './Typography.Styled';
+import { StyledTypographyComponent } from './Typography.Styled.js';
 
-const Typography = ({ type, variant, text, typeColor }) => {
+const Typography = ({ tag, text, typeColor }) => {
   return (
-    <StyledTypographyComponent
-      as={type}
-      variant={variant}
-      typeColor={typeColor}
-    >
+    <StyledTypographyComponent as={tag} typeColor={typeColor}>
       {text}
     </StyledTypographyComponent>
   );
