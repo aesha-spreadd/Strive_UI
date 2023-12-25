@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import theme from '../theme';
-import { TextButtons } from './Button.stories';
 
 export const StyledButtonComponent = styled.button`
   height: 38px;
