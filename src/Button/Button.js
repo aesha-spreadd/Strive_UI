@@ -1,4 +1,3 @@
-// Button.js
 import React from 'react';
 import { StyledButtonComponent } from './Button.Styled';
 
