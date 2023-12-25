@@ -10,7 +10,6 @@ export const StyledButtonComponent = styled.button`
   border-radius: 4px;
   font-size: 14px;
   margin-right: 10px;
-  margin-top: 10px;
   font-family: Arial;
   font-weight: 600;
   text-transform: uppercase;
@@ -18,7 +17,7 @@ export const StyledButtonComponent = styled.button`
 
   ${({ type, variant }) => {
     const isOutlined = variant === 'outlined';
-    const isTextButton = variant === 'textButton';
+    const isTextButton = variant === 'text';
     const isContained = variant === 'contained';
 
     const bgColor = isTextButton ? 'transparent' : theme?.[type];

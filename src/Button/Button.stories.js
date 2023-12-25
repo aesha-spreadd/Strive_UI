@@ -27,14 +27,10 @@ export const OutlineButtons = () => (
 
 export const TextButtons = () => (
   <div>
-    <Button type="primary" variant="textButton" text="Primary Link Button" />
-    <Button
-      type="secondary"
-      variant="textButton"
-      text="Secondary Link Button"
-    />
-    <Button type="success" variant="textButton" text="Success Link Button" />
-    <Button type="warning" variant="textButton" text="Warning Link Button" />
+    <Button type="primary" variant="text" text="Primary Link Button" />
+    <Button type="secondary" variant="text" text="Secondary Link Button" />
+    <Button type="success" variant="text" text="Success Link Button" />
+    <Button type="warning" variant="text" text="Warning Link Button" />
   </div>
 );
 
