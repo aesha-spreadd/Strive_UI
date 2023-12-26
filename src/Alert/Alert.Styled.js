@@ -3,7 +3,7 @@ import theme from '../theme';
 
 export const StyledAlertComponent = styled.div`
   overflow: hidden;
-  height: 38.5px;
+  height: 39px;
   text-overflow: ellipsis;
   white-space: nowrap;
   box-sizing: border-box;
