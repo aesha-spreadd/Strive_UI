@@ -8,11 +8,9 @@ export default {
 };
 
 export const Toasts = () => (
-  <>
-    <ToastContainer>
-      <Toast color="success" text="Successful toast for user action." />
-      <Toast color="warning" text="Warning toast for user action." />
-      <Toast color="danger" text="Danger toast for user action." />
-    </ToastContainer>
-  </>
+  <ToastContainer>
+    <Toast color="success" text="Successful toast for user action." />
+    <Toast color="warning" text="Warning toast for user action." />
+    <Toast color="danger" text="Danger toast for user action." />
+  </ToastContainer>
 );
