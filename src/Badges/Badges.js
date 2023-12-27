@@ -1,16 +1,17 @@
 import React from 'react';
 import { StyledBadgesComponent } from './Badges.Styled';
+import { count } from 'console';
 
-const Badges = ({ type, variant, img, number, colorsEffect }) => {
+const Badges = ({ count, shape, img, count, color }) => {
   return (
     <StyledBadgesComponent
-      type={type}
-      number={number}
-      colorsEffect={colorsEffect}
-      variant={variant}
+      shape={shape}
+      count={count}
+      color={color}
+      size={size}
     >
       <div className="badge-content">
-        <span className="badge-number">{number}</span>
+        <span className="badge-number">{count}</span>
         <img src={img} alt="badge" />
       </div>
     </StyledBadgesComponent>

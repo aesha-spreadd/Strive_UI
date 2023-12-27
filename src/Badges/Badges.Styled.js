@@ -16,8 +16,8 @@ export const StyledBadgesComponent = styled.div`
   font-weight: bold;
   font-family: Rubik, sans-serif;
 
-  ${({ variant, colorsEffect }) =>
-    variant === 'image'
+  ${({ shape, color }) =>
+    shape === 'image'
       ? css`
           position: relative;
           margin-right: 5px;
@@ -27,31 +27,29 @@ export const StyledBadgesComponent = styled.div`
             top: 30px;
             height: 10px;
             width: 10px;
-            background-color: ${theme?.[colorsEffect]};
-            color: ${theme?.[colorsEffect]};
+            background-color: ${theme?.[color]};
+            color: ${theme?.[color]};
             border-radius: 50%;
             padding: 2px;
-            transition:
-              top 0.3s ease,
-              font-size 0.3s ease;
+            transition: top 0.3s ease, font-size 0.3s ease;
           }
 
           img {
             border-radius: 50%;
-            ${({ type }) => `
-              width: ${sizes[type]?.width};
-              height: ${sizes[type]?.height};
+            ${({ size }) => `
+              width: ${sizes[size]?.width};
+              height: ${sizes[size]?.height};
             `}
           }
 
-          ${colorsEffect &&
+          ${color &&
           css`
             span.badge-number {
-              top: ${colorsEffect === 'primary'
+              top: ${color === 'primary'
                 ? 17
-                : colorsEffect === 'warning'
-                  ? 26
-                  : 36}px;
+                : color === 'warning'
+                ? 26
+                : 36}px;
             }
           `}
         `
@@ -76,15 +74,11 @@ export const StyledBadgesComponent = styled.div`
 
           img {
             border-radius: 50%;
-            transition:
-              width 0.3s ease,
-              height 0.3s ease;
-            ${({ type }) => `
-              width: ${sizes[type]?.width};
-              height: ${sizes[type]?.height};
+            transition: width 0.3s ease, height 0.3s ease;
+            ${({ size }) => `
+              width: ${sizes[size]?.width};
+              height: ${sizes[size]?.height};
             `}
           }
         `}
 `;
-
-export default StyledBadgesComponent;
