@@ -24,7 +24,7 @@ export const StyledToastComponent = styled.div`
   font-family: 'Rubik', sans-serif;
   font-size: 15px;
 
-  ${({ type }) => css`
+  ${({ color }) => css`
     background-color: ${theme.textColor};
     color: ${theme?.[color]};
     border: 2px solid ${theme?.[color]};
