@@ -7,8 +7,6 @@ const sizes = {
 };
 
 export const StyledImagesComponent = styled.div`
-  display: flex;
-  flex-direction: row;
   gap: 1rem;
   justify-content: center;
   align-items: center;
@@ -46,14 +44,13 @@ export const StyledImagesComponent = styled.div`
         object-fit: cover;
         width: 100%;
         height: auto;
-
-        @media (min-width: 769px) {
-          width: 800px;
-          height: 480px;
-        }
-
         padding: 10px;
         margin: 10px;
+
+        @media (max-width: 769px) {
+          width: 100%;
+          height: auto;
+        }
       `};
   }
 `;
