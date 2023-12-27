@@ -10,9 +10,9 @@ export default {
 export const CircularAvatar = () => (
   <div>
     <AvatarContainer>
-      <Avatar type="small" img="https://i.pravatar.cc/40" variant="circle" />
-      <Avatar type="medium" img="https://i.pravatar.cc/41" variant="circle" />
-      <Avatar type="large" img="https://i.pravatar.cc/42" variant="circle" />
+      <Avatar size="small" img="https://i.pravatar.cc/40" shape="circle" />
+      <Avatar size="medium" img="https://i.pravatar.cc/41" shape="circle" />
+      <Avatar size="large" img="https://i.pravatar.cc/42" shape="circle" />
     </AvatarContainer>
   </div>
 );
@@ -20,9 +20,9 @@ export const CircularAvatar = () => (
 export const SquareAvatar = () => (
   <div>
     <AvatarContainer>
-      <Avatar type="small" img="https://i.pravatar.cc/45" variant="square" />
-      <Avatar type="medium" img="https://i.pravatar.cc/44" variant="square" />
-      <Avatar type="large" img="https://i.pravatar.cc/43" variant="square" />
+      <Avatar size="small" img="https://i.pravatar.cc/45" shape="square" />
+      <Avatar size="medium" img="https://i.pravatar.cc/44" shape="square" />
+      <Avatar size="large" img="https://i.pravatar.cc/43" shape="square" />
     </AvatarContainer>
   </div>
 );

@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyledAvatarComponent } from './Avatar.Styled';
 
-const Avatar = ({ type, img, variant }) => {
+const Avatar = ({ size, img, shape }) => {
   return (
-    <StyledAvatarComponent type={type} variant={variant}>
+    <StyledAvatarComponent size={size} shape={shape}>
       <img src={img} alt="Avatar" />
     </StyledAvatarComponent>
   );

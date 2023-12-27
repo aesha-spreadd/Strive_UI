@@ -7,16 +7,16 @@ const sizes = {
 };
 
 const avatarStyles = css`
-  ${({ type }) => `
+  ${({ size }) => `
     width: ${sizes[type]?.width};
     height: ${sizes[type]?.height};
   `}
 `;
 
 export const StyledAvatarComponent = styled.div`
-  ${({ variant }) => css`
+  ${({ shape }) => css`
     img {
-      border-radius: ${variant === 'square' ? '0.5rem' : '50%'};
+      border-radius: ${shape === 'square' ? '0.5rem' : '50%'};
       display: block;
       overflow: hidden;
       margin: 0 5px;
