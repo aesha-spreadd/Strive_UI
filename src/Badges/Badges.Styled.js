@@ -15,13 +15,11 @@ export const StyledBadgesComponent = styled.div`
   font-size: 0.6rem;
   font-weight: bold;
   font-family: Rubik, sans-serif;
-
-  ${({ shape, color }) =>
-    shape === 'image'
+  ${({ type, color }) =>
+    type === 'default'
       ? css`
           position: relative;
           margin-right: 5px;
-
           span.badge-number {
             position: absolute;
             top: 30px;
@@ -31,9 +29,10 @@ export const StyledBadgesComponent = styled.div`
             color: ${theme?.[color]};
             border-radius: 50%;
             padding: 2px;
-            transition: top 0.3s ease, font-size 0.3s ease;
+            transition:
+              top 0.3s ease,
+              font-size 0.3s ease;
           }
-
           img {
             border-radius: 50%;
             ${({ size }) => `
@@ -41,15 +40,14 @@ export const StyledBadgesComponent = styled.div`
               height: ${sizes[size]?.height};
             `}
           }
-
           ${color &&
           css`
             span.badge-number {
               top: ${color === 'primary'
                 ? 17
                 : color === 'warning'
-                ? 26
-                : 36}px;
+                  ? 26
+                  : 36}px;
             }
           `}
         `
@@ -58,7 +56,6 @@ export const StyledBadgesComponent = styled.div`
           display: flex;
           align-items: center;
           margin-right: 5px;
-
           span.badge-number {
             position: absolute;
             top: 1px;
@@ -71,10 +68,11 @@ export const StyledBadgesComponent = styled.div`
             padding: 2px;
             border: 2px solid white;
           }
-
           img {
             border-radius: 50%;
-            transition: width 0.3s ease, height 0.3s ease;
+            transition:
+              width 0.3s ease,
+              height 0.3s ease;
             ${({ size }) => `
               width: ${sizes[size]?.width};
               height: ${sizes[size]?.height};
@@ -82,3 +80,4 @@ export const StyledBadgesComponent = styled.div`
           }
         `}
 `;
+

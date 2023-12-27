@@ -12,19 +12,19 @@ export const CartBadges = () => (
     <StyledBadgesComponent>
       <Badges
         size="small"
-        shape="cart"
+        type="cart"
         img="https://adorn-components.netlify.app/assets/images/cart.svg"
         count={10}
       />
       <Badges
         size="medium"
-        shape="cart"
+        type="cart"
         img="https://adorn-components.netlify.app/assets/images/cart.svg"
         count={12}
       />
       <Badges
         size="large"
-        shape="cart"
+        type="cart"
         img="https://adorn-components.netlify.app/assets/images/cart.svg"
         count={15}
       />
@@ -37,19 +37,19 @@ export const ImageBadges = () => (
     <StyledBadgesComponent>
       <Badges
         size="small"
-        shape="image"
+        type="default"
         color="primary"
         img="https://i.pravatar.cc/62"
       />
       <Badges
         size="medium"
-        shape="image"
+        type="default"
         color="warning"
         img="https://i.pravatar.cc/61"
       />
       <Badges
         size="large"
-        shape="image"
+        type="default"
         color="success"
         img="https://i.pravatar.cc/60"
       />
