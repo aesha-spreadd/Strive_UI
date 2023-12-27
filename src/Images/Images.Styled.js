@@ -1,34 +1,59 @@
-import React from 'react';
-import { AvatarContainer } from '../Avatar/Avatar.Styled';
-import Images from './Images'; // Assuming Images is the correct component to use
+import styled, { css } from 'styled-components';
 
-export default {
-  title: 'Images',
-  component: Images,
+const sizes = {
+  circle: { widths: '150px', heights: '150px' },
+  square: { widths: '150px', heights: '150px' },
+  response: { widths: '100%', heights: '100%' },
 };
 
-export const CircularImages = () => (
-  <div>
-    <AvatarContainer>
-      <Images shape="circle" img="https://i.pravatar.cc/40" />
-      <Images shape="circle" img="https://i.pravatar.cc/41" />
-    </AvatarContainer>
-  </div>
-);
+export const StyledImagesComponent = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 
-export const SquareImages = () => (
-  <div>
-    <AvatarContainer>
-      <Images shape="square" img="https://i.pravatar.cc/45" />
-      <Images shape="square" img="https://i.pravatar.cc/44" />
-    </AvatarContainer>
-  </div>
-);
+  img {
+    margin: auto;
+    ${({ shape }) =>
+      shape &&
+      css`
+        width: ${sizes[shape].widths || 'auto'};
+        height: ${sizes[shape].heights || 'auto'};
+      `};
 
-export const ResponsiveImages = () => (
-  <div>
-    <AvatarContainer>
-      <Images shape="response" img="https://i.pravatar.cc/" />
-    </AvatarContainer>
-  </div>
-);
+    ${({ shape }) =>
+      shape === 'square' &&
+      css`
+        object-fit: cover;
+        overflow-clip-margin: content-box;
+        overflow-x: clip;
+        overflow-y: clip;
+      `};
+
+    ${({ shape }) =>
+      shape === 'circle' &&
+      css`
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 5px;
+      `};
+
+    ${({ shape }) =>
+      shape === 'response' &&
+      css`
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+
+        @media (min-width: 769px) {
+          width: 800px;
+          height: 480px;
+        }
+
+        padding: 10px;
+        margin: 10px;
+      `};
+  }
+`;
