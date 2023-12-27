@@ -9,14 +9,13 @@ const sizes = {
 
 export const StyledBadgesComponent = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 0.6rem;
   font-weight: bold;
   font-family: Rubik, sans-serif;
   position: relative;
-  margin-right: 5px;
+  margin: 0 5px 0 0;
 
   span.badge-number {
     position: absolute;
@@ -24,16 +23,10 @@ export const StyledBadgesComponent = styled.div`
     width: 12px;
     border-radius: 50%;
     padding: 2px;
-    transition:
-      top 0.3s ease,
-      font-size 0.3s ease;
   }
 
   img {
     border-radius: 50%;
-    transition:
-      width 0.3s ease,
-      height 0.3s ease;
     ${({ size }) => `
       width: ${sizes[size]?.width};
       height: ${sizes[size]?.height};
@@ -55,7 +48,7 @@ export const StyledBadgesComponent = styled.div`
             right: -3px;
             background-color: ${theme.primary};
             color: ${theme.textColor};
-            border: 2px solid white;
+            border: 2px solid ${theme.textColor};
           }
         `}
 `;
