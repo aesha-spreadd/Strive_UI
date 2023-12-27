@@ -1,5 +1,5 @@
 import React from 'react';
-import Toast from './Toast'; // Update the import path if needed
+import Toast from './Toast';
 import { ToastContainer } from './Toast.Styled';
 
 export default {
