@@ -2,15 +2,10 @@ import styled from 'styled-components';
 import theme from '../theme';
 
 export const StyledInputComponent = styled.div`
-  column-gap: 10px;
-  flex-wrap: wrap;
   font-family: 'Rubik', sans-serif;
   font-size: 15px;
-  height: 182px;
-  justify-content: center;
-  padding: 15px 50px;
-  row-gap: 10px;
-  width: 800px;
+  padding: 0 50px;
+  margin: 10px 0 0 0;
 
   input {
     width: 100%;
@@ -29,10 +24,8 @@ export const StyledInputComponent = styled.div`
 `;
 
 export const Input_Container_inputs_type = styled.div`
-  flex-direction: column;
-  flex-wrap: nowrap;
-  height: 77px;
-  width: 540px;
+  height: 100%;
+  width: 100%;
 `;
 
 export const StyledSpan = styled.span`

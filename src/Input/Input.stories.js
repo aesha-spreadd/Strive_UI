@@ -10,10 +10,16 @@ export default {
 export const Inputs = () => (
   <div>
     <Input_Container_inputs_type>
-      <Input label="Username*" />
+      <Input label="Username*" name="username" placeholder="Enter name here" />
     </Input_Container_inputs_type>
     <Input_Container_inputs_type>
-      <Input label="Password*" color spantext="Password is incorrect" />
+      <Input
+        label="Password*"
+        name="password"
+        placeholder="Enter password here"
+        color
+        spantext="Password is incorrect"
+      />
     </Input_Container_inputs_type>
   </div>
 );
