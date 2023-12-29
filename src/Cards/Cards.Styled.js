@@ -1,28 +1,27 @@
 import styled, { css } from 'styled-components';
 import theme from '../theme';
 
-export const commonStyled = css`
+export const StyledCommon = css`
   margin: 20px;
   border-radius: 5px;
   height: auto;
   padding: 10px 10px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   background-color: ${theme.pastelCardColor};
 `;
 
-export const commonButton = css`
+export const StyledCommonButton = css`
   background-color: ${theme.textColor};
   color: ${theme.primary};
   border: 1px solid ${theme.primary};
   cursor: pointer;
-  height: 38px;
-  width: 298px;
-  padding: -1px 110px;
-  cursor: pointer;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
   border-radius: 4px;
   font-size: 14px;
-  margin-right: 10px;
-  font-family: Arial;
+  margin: 0 10px 0 0;
   font-weight: 600;
   text-transform: uppercase;
 
@@ -31,13 +30,6 @@ export const commonButton = css`
     background-color: ${theme.primary};
     color: ${theme.textColor};
   }
-`;
-
-export const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 `;
 
 export const StyledCardComponent = styled.div`
@@ -52,30 +44,30 @@ export const StyledCardComponent = styled.div`
     color: ${theme.cardTextColor};
     font-size: 14px;
     font-weight: 400;
-    line-height: 19.6px;
+    line-height: 20px;
   }
 `;
 
 export const StyledNormalCard = styled.div`
-  ${commonStyled};
+  ${StyledCommon};
   display: block;
-  border-radius: 5px;
   border: 3px solid ${theme.pastelCardColor};
-  column-gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 129.875px;
-  padding: 50px 50px;
-  width: 695px;
-  flex-direction: column;
-  height: 109.875px;
+  width: 100%;
   max-width: 300px;
-  padding: 10px;
-  transition: all 0.5s ease;
 `;
 
-export const labelText = styled.div`
+export const label = styled.div`
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  background-color: ${theme.primary};
+  color: ${theme.textColor};
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 10px;
+`;
+
+export const closeIcon = styled.div`
   position: absolute;
   top: 30px;
   left: 0px;
@@ -87,63 +79,51 @@ export const labelText = styled.div`
 `;
 
 export const StyledBadgesCard = styled.div`
-  ${commonStyled};
+  ${StyledCommon};
   position: relative;
   img {
-    position: relative;
-    object-fit: cover;
     border-radius: 5px;
-    top: -10px;
   }
-  ${labelText}
+
+  ${label}
 
   button {
-    ${commonButton};
+    ${StyledCommonButton};
   }
 `;
 
 export const StyledDismissCard = styled.div`
-  ${commonStyled};
+  ${StyledCommon};
   position: relative;
 
   img {
     position: relative;
     object-fit: cover;
     border-radius: 5px;
-    top: -10px;
   }
 
-  ${({ unique }) =>
-    unique !== 'badge' &&
-    `
-  ${labelText} {
-   left:270px;
-   top:26px;
+  ${closeIcon} {
+    left: 270px;
   }
-`}
 
   button {
-    ${commonButton};
+    ${StyledCommonButton};
   }
 `;
 
 export const StyledDismissCardOverlay = styled.div`
-  ${commonStyled};
+  ${StyledCommon};
   position: relative;
-  ${({ unique }) =>
-    unique !== 'badge' &&
-    `
-  ${labelText} {
-   left:270px;
-   top:22px;
+
+  ${closeIcon} {
+    left: 270px;
   }
-`}
   button {
-    ${commonButton};
+    ${StyledCommonButton};
   }
 `;
 
-export const Overlay = styled.div`
+export const StyledOverlay = styled.div`
   position: relative;
 
   img {
@@ -159,60 +139,51 @@ export const Overlay = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    transition-timing-function: ease;
-    color: rgb(246, 249, 252);
+    color: ${theme.textColor};
     display: block;
-    font-family: Rubik, sans-serif;
     font-size: 24px;
-    height: 28.5px;
+    height: 28px;
   }
 `;
 
 export const StyledHorizontalCard = styled.div`
-  background-color: rgb(246, 249, 252);
+  background-color: ${theme.textColor};
   border-radius: 5px;
-  column-gap: 10px;
+  gap: 10px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  font-family: Rubik, sans-serif;
+  width: 100%;
   font-size: 6px;
   height: auto;
   max-width: 700px;
   padding: 10px;
-  row-gap: 10px;
-  transition: all 0.5s ease;
 
   h2 {
-    color: rgb(255, 78, 84);
+    color: ${theme.primary};
     display: block;
-    font-family: Rubik, sans-serif;
     font-size: 18px;
     font-weight: 500;
-    margin-top: -15px;
+    margin: 0;
   }
 
-  p {
-    margin-top: -7px;
-  }
   button {
-    ${commonButton};
+    ${StyledCommonButton};
     width: 580px;
   }
 `;
 
-export const Overlayed = styled.div`
+export const StyledOverlayed = styled.div`
   position: relative;
-  height: 120.281px;
+  max-height: 120px;
+  height: auto;
   display: block;
 
   img {
     border-radius: 5px;
     display: inline;
-    font-family: Rubik, sans-serif;
     font-size: 6px;
-    height: 70px;
-    width: auto;
+    max-height: 170px;
+    height: auto;
+    width: 100%;
     overflow: hidden;
   }
 `;

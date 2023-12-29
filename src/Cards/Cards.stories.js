@@ -6,8 +6,8 @@ import {
   StyledDismissCard,
   StyledDismissCardOverlay,
   StyledHorizontalCard,
-  Overlay,
-  Overlayed,
+  StyledOverlay,
+  StyledOverlayed,
 } from './Cards.Styled';
 
 export default {
@@ -32,7 +32,7 @@ export const SimpleCard = () => (
 export const BadgeCard = () => (
   <div>
     <StyledBadgesCard>
-      <Cards labelText="The Training" unique="badge">
+      <Cards label="The Training">
         <img src="https://picsum.photos/300/200/?blur" alt="Badge" />
         <h2>Survey Corps</h2>
         <p>
@@ -49,7 +49,7 @@ export const BadgeCard = () => (
 export const DismissCard = () => (
   <div>
     <StyledDismissCard>
-      <Cards labelText="X" unique="dismiss">
+      <Cards closeIcon="X">
         <img src="https://picsum.photos/300/200/?blur" alt="Badge" />
         <h2>Survey Corps Anime Book</h2>
         <p>Rs. 250</p>
@@ -62,11 +62,11 @@ export const DismissCard = () => (
 export const DismissCardOverlay = () => (
   <div>
     <StyledDismissCardOverlay>
-      <Overlay>
+      <StyledOverlay>
         <div>Out Of Stock</div>
         <img src="https://picsum.photos/300/200/?blur" alt="Badge" />
-      </Overlay>
-      <Cards labelText="X" unique="dismiss">
+      </StyledOverlay>
+      <Cards closeIcon="X">
         <h2>Survey Corps Anime Book</h2>
         <p>Rs. 250</p>
         <button type="button">Out Of Stock</button>
@@ -78,9 +78,9 @@ export const DismissCardOverlay = () => (
 export const HorizontalCard = () => (
   <div>
     <StyledHorizontalCard>
-      <Overlayed>
+      <StyledOverlayed>
         <img src="https://picsum.photos/300/200/?blur" alt="Badge" />
-      </Overlayed>
+      </StyledOverlayed>
       <Cards>
         <h2>Founding Titan</h2>
         <p>

@@ -1,22 +1,19 @@
 import React from 'react';
-import { StyledCardComponent, labelText as LabelWrapper } from './Cards.Styled';
+import {
+  StyledCardComponent,
+  label as LabelWrapper,
+  closeIcon as CloseIconWrapper,
+} from './Cards.Styled';
 
-const Cards = ({
-  title,
-  text,
-  textUnique,
-  unique,
-  imgSrc,
-  labelText,
-  children,
-}) => {
+const Cards = ({ title, description, imgSrc, label, closeIcon, children }) => {
   return (
-    <StyledCardComponent unique={unique} textUnique={textUnique}>
+    <StyledCardComponent>
       {imgSrc && <img src={imgSrc} alt="Images" />}
       <h2>{title}</h2>
       {children && <div>{children}</div>}
-      {labelText && <LabelWrapper>{labelText}</LabelWrapper>}
-      {text && <p>{text}</p>}
+      {label && <LabelWrapper>{label}</LabelWrapper>}
+      {closeIcon && <CloseIconWrapper>{closeIcon}</CloseIconWrapper>}
+      {description && <p>{description}</p>}
     </StyledCardComponent>
   );
 };
