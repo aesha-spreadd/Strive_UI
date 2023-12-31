@@ -11,7 +11,8 @@ export const StyledInputComponent = styled.div`
     width: 100%;
     padding: 8px;
     margin: 0 0 16px 0;
-    border: 1px solid ${(props) => (props.color ? theme.primary : 'black')};
+    border: 1px solid
+      ${(props) => (props.name === 'password' ? theme.primary : 'black')};
     border-radius: 3px;
   }
 
@@ -23,12 +24,7 @@ export const StyledInputComponent = styled.div`
   }
 `;
 
-export const Input_Container_inputs_type = styled.div`
+export const StyledInputType = styled.div`
   height: 100%;
   width: 100%;
-`;
-
-export const StyledSpan = styled.span`
-  color: ${theme.primary};
-  font-size: 15px;
 `;

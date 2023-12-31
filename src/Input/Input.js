@@ -1,12 +1,10 @@
 import React from 'react';
-import { StyledInputComponent, StyledSpan } from './Input.Styled';
+import { StyledInputComponent } from './Input.Styled';
 
-const Input = ({ label, color, spantext, name, placeholder }) => {
+const Input = ({ name, placeholder }) => {
   return (
-    <StyledInputComponent color={color} name={name}>
-      <label>{label}</label>
+    <StyledInputComponent name={name}>
       <input type="text" placeholder={placeholder} />
-      {spantext && <StyledSpan>{spantext}</StyledSpan>}
     </StyledInputComponent>
   );
 };

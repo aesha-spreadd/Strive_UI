@@ -1,6 +1,8 @@
 import React from 'react';
 import Input from './Input';
-import { Input_Container_inputs_type } from './Input.Styled';
+import { StyledInputType } from './Input.Styled';
+import Typography from '../Typography/Typography';
+import { StyledTypographyComponent } from '../Typography/Typography';
 
 export default {
   title: 'Input',
@@ -9,17 +11,29 @@ export default {
 
 export const Inputs = () => (
   <div>
-    <Input_Container_inputs_type>
-      <Input label="Username*" name="username" placeholder="Enter name here" />
-    </Input_Container_inputs_type>
-    <Input_Container_inputs_type>
-      <Input
-        label="Password*"
-        name="password"
-        placeholder="Enter password here"
-        color
-        spantext="Password is incorrect"
+    <StyledInputType>
+      <Typography
+        tag="p"
+        text="Username*"
+        typeColor="textLinkColor"
+        style={{ margin: '0 0 0 50px', display: 'block' }}
       />
-    </Input_Container_inputs_type>
+      <Input name="username" placeholder="Enter name here" />
+    </StyledInputType>
+    <StyledInputType>
+      <Typography
+        tag="p"
+        text="Password*"
+        typeColor="primary"
+        style={{ margin: '0 0 0 50px', display: 'block' }}
+      />
+      <Input name="password" placeholder="Enter password here" />
+      <Typography
+        tag="p"
+        text="Password is incorrect"
+        typeColor="primary"
+        style={{ margin: '0 0 0 50px', display: 'block' }}
+      />
+    </StyledInputType>
   </div>
 );
