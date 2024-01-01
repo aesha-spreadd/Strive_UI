@@ -5,7 +5,7 @@ export const StyledNavbarComponent = styled.div`
   font-family: 'Rubik', sans-serif;
 `;
 
-export const NavbarMainContainer = styled.div`
+export const StyledNavbarMainContainer = styled.div`
   background-color: rgb(255, 237, 237);
   border-radius: 5px;
   display: flex;
@@ -52,7 +52,6 @@ export const NavbarContentContainer = styled.div`
 export const NavbarIconContainer = styled.div`
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
 `;
 
 export const NavbarLinkContainer = styled.div`
@@ -64,7 +63,6 @@ export const NavbarLinkContainer = styled.div`
 
   li {
     padding: 5px;
-    margin: 5px;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 4px;
