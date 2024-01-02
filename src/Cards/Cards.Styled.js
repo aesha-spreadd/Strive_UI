@@ -8,11 +8,11 @@ export const StyledCommon = css`
   padding: 10px 10px;
   max-width: 300px;
   width: 100%;
-  background-color: ${theme.pastelCardColor};
+  background-color: ${theme.pastelColor};
 `;
 
 export const StyledCommonButton = css`
-  background-color: ${theme.textColor};
+  background-color: ${theme.neutral};
   color: ${theme.primary};
   border: 1px solid ${theme.primary};
   cursor: pointer;
@@ -28,7 +28,7 @@ export const StyledCommonButton = css`
   &:hover,
   &:active {
     background-color: ${theme.primary};
-    color: ${theme.textColor};
+    color: ${theme.lightWhite};
   }
 `;
 
@@ -41,7 +41,7 @@ export const StyledCardComponent = styled.div`
   }
 
   p {
-    color: ${theme.cardTextColor};
+    color: ${theme.lightWhite};
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -51,7 +51,7 @@ export const StyledCardComponent = styled.div`
 export const StyledNormalCard = styled.div`
   ${StyledCommon};
   display: block;
-  border: 3px solid ${theme.pastelCardColor};
+  border: 3px solid ${theme.pastelColor};
   width: 100%;
   max-width: 300px;
 `;
@@ -61,7 +61,7 @@ export const label = styled.div`
   top: 30px;
   left: 0px;
   background-color: ${theme.primary};
-  color: ${theme.textColor};
+  color: ${theme.neutral};
   font-weight: 600;
   font-size: 14px;
   padding: 5px 10px;
@@ -72,7 +72,7 @@ export const closeIcon = styled.div`
   top: 30px;
   left: 0px;
   background-color: ${theme.primary};
-  color: ${theme.textColor};
+  color: ${theme.neutral};
   font-weight: 600;
   font-size: 14px;
   padding: 5px 10px;
@@ -139,7 +139,7 @@ export const StyledOverlay = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    color: ${theme.textColor};
+    color: ${theme.neutral};
     display: block;
     font-size: 24px;
     height: 28px;
@@ -147,7 +147,7 @@ export const StyledOverlay = styled.div`
 `;
 
 export const StyledHorizontalCard = styled.div`
-  background-color: ${theme.textColor};
+  background-color: ${theme.neutral};
   border-radius: 5px;
   gap: 10px;
   display: flex;
