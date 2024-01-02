@@ -2,7 +2,7 @@ import React from 'react';
 import {
   StyledCardComponent,
   label as LabelWrapper,
-  closeIcon as CloseIconWrapper,
+  CloseIconWrapper,
 } from './Cards.Styled';
 
 const Cards = ({ title, description, imgSrc, label, closeIcon, children }) => {
@@ -12,8 +12,13 @@ const Cards = ({ title, description, imgSrc, label, closeIcon, children }) => {
       <h2>{title}</h2>
       {children && <div>{children}</div>}
       {label && <LabelWrapper>{label}</LabelWrapper>}
-      {closeIcon && <CloseIconWrapper>{closeIcon}</CloseIconWrapper>}
+
       {description && <p>{description}</p>}
+      {closeIcon && (
+        <CloseIconWrapper className="custom-close-icon">
+          {closeIcon}
+        </CloseIconWrapper>
+      )}
     </StyledCardComponent>
   );
 };

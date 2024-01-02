@@ -67,15 +67,16 @@ export const label = styled.div`
   padding: 5px 10px;
 `;
 
-export const closeIcon = styled.div`
-  position: absolute;
-  top: 30px;
-  left: 0px;
-  background-color: ${theme.primary};
-  color: ${theme.neutral};
-  font-weight: 600;
-  font-size: 14px;
-  padding: 5px 10px;
+export const CloseIconWrapper = styled.div`
+  &.custom-close-icon {
+    position: absolute;
+    top: 30px;
+    background-color: ${theme.primary};
+    color: ${theme.neutral};
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
 `;
 
 export const StyledBadgesCard = styled.div`
@@ -101,9 +102,15 @@ export const StyledDismissCard = styled.div`
     object-fit: cover;
     border-radius: 5px;
   }
-
-  ${closeIcon} {
+  ${CloseIconWrapper} {
+    position: absolute;
     left: 270px;
+    top: 35px;
+    background-color: ${theme.primary};
+    color: ${theme.neutral};
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 10px;
   }
 
   button {
@@ -115,11 +122,19 @@ export const StyledDismissCardOverlay = styled.div`
   ${StyledCommon};
   position: relative;
 
-  ${closeIcon} {
-    left: 270px;
-  }
   button {
     ${StyledCommonButton};
+  }
+
+  ${CloseIconWrapper} {
+    position: absolute;
+    left: 260px;
+    top: 30px;
+    background-color: ${theme.primary};
+    color: ${theme.neutral};
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 10px;
   }
 `;
 
