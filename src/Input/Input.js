@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyledInputComponent, Prefix, Suffix } from './Input.Styled';
+import { StyledInputComponent } from './Input.Styled';
 
-const Input = ({ name, placeholder, suffix, prefix }) => {
+const Input = ({ type, id, placeholder, prefix, suffix }) => {
   return (
-    <StyledInputComponent name={name}>
-      {prefix && <Prefix>{prefix}</Prefix>}
-      <input type="text" placeholder={placeholder} />
-      {suffix && <Suffix>{suffix}</Suffix>}
+    <StyledInputComponent>
+      <div className="input-container">
+        {prefix && <span className="prefix">{prefix}</span>}
+        <input type={type} id={id} placeholder={placeholder} />
+        {suffix && <span className="suffix">{suffix}</span>}
+      </div>
     </StyledInputComponent>
   );
 };
