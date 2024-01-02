@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   StyledCardComponent,
-  label as LabelWrapper,
-  CloseIconWrapper,
+  StyledLabelWrapper,
+  StyledCloseIconWrapper,
 } from './Cards.Styled';
 
 const Cards = ({ title, description, imgSrc, label, closeIcon, children }) => {
@@ -11,13 +11,13 @@ const Cards = ({ title, description, imgSrc, label, closeIcon, children }) => {
       {imgSrc && <img src={imgSrc} alt="Images" />}
       <h2>{title}</h2>
       {children && <div>{children}</div>}
-      {label && <LabelWrapper>{label}</LabelWrapper>}
+      {label && <StyledLabelWrapper>{label}</StyledLabelWrapper>}
 
       {description && <p>{description}</p>}
       {closeIcon && (
-        <CloseIconWrapper className="custom-close-icon">
+        <StyledCloseIconWrapper className="custom-close-icon">
           {closeIcon}
-        </CloseIconWrapper>
+        </StyledCloseIconWrapper>
       )}
     </StyledCardComponent>
   );

@@ -56,7 +56,7 @@ export const StyledNormalCard = styled.div`
   max-width: 300px;
 `;
 
-export const label = styled.div`
+export const StyledLabelWrapper = styled.div`
   position: absolute;
   top: 30px;
   left: 0px;
@@ -67,7 +67,7 @@ export const label = styled.div`
   padding: 5px 10px;
 `;
 
-export const CloseIconWrapper = styled.div`
+export const StyledCloseIconWrapper = styled.div`
   &.custom-close-icon {
     position: absolute;
     top: 30px;
@@ -86,7 +86,7 @@ export const StyledBadgesCard = styled.div`
     border-radius: 5px;
   }
 
-  ${label}
+  ${StyledLabelWrapper}
 
   button {
     ${StyledCommonButton};
@@ -102,7 +102,7 @@ export const StyledDismissCard = styled.div`
     object-fit: cover;
     border-radius: 5px;
   }
-  ${CloseIconWrapper} {
+  ${StyledCloseIconWrapper} {
     position: absolute;
     left: 270px;
     top: 35px;
@@ -126,7 +126,7 @@ export const StyledDismissCardOverlay = styled.div`
     ${StyledCommonButton};
   }
 
-  ${CloseIconWrapper} {
+  ${StyledCloseIconWrapper} {
     position: absolute;
     left: 260px;
     top: 30px;
