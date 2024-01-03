@@ -5,10 +5,10 @@ const theme = {
   warning: '#f3b664',
   textLinkColors: '#000',
   inputBorder: 'rgb(74, 74, 104)',
-  textColor: 'rgb(246, 249, 252)',
+  neutral: 'rgb(246, 249, 252)',
   danger: 'rgb(244, 67, 54)',
-  cardTextColor: 'rgb(74, 74, 104)',
-  pastelCardColor: '#E0AED0',
+  lightWhite: 'rgb(74, 74, 104)',
+  pastelColor: '#E0AED0',
 };
 
 export default theme;
