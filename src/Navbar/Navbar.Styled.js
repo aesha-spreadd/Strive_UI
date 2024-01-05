@@ -25,6 +25,7 @@ export const StyledNavbarExample = styled.div`
     font-weight: 600;
     font-size: 30px;
     margin: 0 30px 0 0;
+    line-height: 35px;
   }
 `;
 
