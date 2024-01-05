@@ -2,9 +2,9 @@ import React from 'react';
 import Navbar from './Navbar';
 import {
   StyledNavbarExample,
-  NavbarContentContainer,
-  NavbarIconContainer,
-  NavbarLinkContainer,
+  StyledNavbarContentContainer,
+  StyledNavbarIconContainer,
+  StyledNavbarLinkContainer,
 } from './Navbar.Styled';
 import Button from '../Button/Button';
 import Badges from '../Badges/Badges';
@@ -19,7 +19,7 @@ export const ListNavbar = () => (
     <Navbar>
       <StyledNavbarExample>
         <h2>Adorn Box</h2>
-        <NavbarContentContainer>
+        <StyledNavbarContentContainer>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <input
               type="text"
@@ -28,9 +28,9 @@ export const ListNavbar = () => (
             />
             <Button type="secondary" variant="outlined" text="Login" />
           </div>
-        </NavbarContentContainer>
+        </StyledNavbarContentContainer>
 
-        <NavbarIconContainer>
+        <StyledNavbarIconContainer>
           <Badges
             size="medium"
             type="cart"
@@ -43,9 +43,9 @@ export const ListNavbar = () => (
             img="https://adorn-components.netlify.app/assets/images/cart-outlined.svg"
             count={12}
           />
-        </NavbarIconContainer>
+        </StyledNavbarIconContainer>
 
-        <NavbarLinkContainer>
+        <StyledNavbarLinkContainer>
           <ul>
             <li>
               <a href="#">Home</a>
@@ -63,7 +63,7 @@ export const ListNavbar = () => (
               <a href="#">Services</a>
             </li>
           </ul>
-        </NavbarLinkContainer>
+        </StyledNavbarLinkContainer>
       </StyledNavbarExample>
     </Navbar>
   </div>

@@ -9,37 +9,39 @@ export const StyledNavbarMainContainer = styled.div`
   background-color: rgb(255, 237, 237);
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 `;
 
 export const StyledNavbarExample = styled.div`
-  background: rgb(246, 249, 252);
+  background: ${theme.textColor};
   width: 100%;
   display: flex;
   align-items: center;
+
   h2 {
     color: ${theme.primary};
-    padding-left: 18px;
+    padding: 0 0 0 18px;
     font-weight: 600;
     font-size: 30px;
-    margin-right: 30px;
+    margin: 0 30px 0 0;
   }
 `;
 
-export const NavbarContainer = styled.div`
+export const StyledNavbarContainer = styled.div`
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   height: 45.5px;
   justify-content: space-between;
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
 `;
 
-export const NavbarContentContainer = styled.div`
+export const StyledNavbarContentContainer = styled.div`
   align-items: center;
   display: flex;
+
   input[type='text'] {
     padding: 8px;
     border: 1px solid #ccc;
@@ -49,13 +51,14 @@ export const NavbarContentContainer = styled.div`
   }
 `;
 
-export const NavbarIconContainer = styled.div`
+export const StyledNavbarIconContainer = styled.div`
   align-items: center;
   display: flex;
 `;
 
-export const NavbarLinkContainer = styled.div`
+export const StyledNavbarLinkContainer = styled.div`
   margin: 0;
+
   ul {
     list-style-type: none;
     display: inline-flex;
@@ -67,14 +70,17 @@ export const NavbarLinkContainer = styled.div`
     border: 2px solid transparent;
     border-radius: 4px;
   }
+
   li:hover {
-    background-color: white;
+    background-color: ${theme.textColor};
   }
+
   a {
     text-decoration: none;
     cursor: pointer;
     color: ${theme.secondary};
   }
+
   a:hover {
     color: ${theme.primary};
   }
